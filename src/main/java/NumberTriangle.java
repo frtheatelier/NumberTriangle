@@ -90,7 +90,6 @@ public class NumberTriangle {
      *
      */
     public int retrieve(String path) {
-        // TODO implement this method
         if (path.isEmpty()) { return this.getRoot(); }
 
         if (path.charAt(0) == 'l') { return this.left.retrieve(path.substring(1)); }
@@ -116,8 +115,6 @@ public class NumberTriangle {
         InputStream inputStream = NumberTriangle.class.getClassLoader().getResourceAsStream(fname);
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
 
-
-        // TODO define any variables that you want to use to store things
         ArrayList<ArrayList<NumberTriangle>> triangles = new ArrayList<>();
         int currentRow = 0;
 
@@ -131,7 +128,6 @@ public class NumberTriangle {
             // remove when done; this line is included so running starter code prints the contents of the file
             System.out.println(line);
 
-            // TODO process the line
             ArrayList<NumberTriangle> tmp = new ArrayList<>();
             int[] nums = Arrays.stream(line.split(" "))
                     .mapToInt(Integer::parseInt)
